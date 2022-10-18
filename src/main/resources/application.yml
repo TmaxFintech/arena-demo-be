@@ -1,0 +1,4 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://mlops:tmax_mlops@34.125.46.122:27017/news?authSource=admin&authMechanism=SCRAM-SHA-1
