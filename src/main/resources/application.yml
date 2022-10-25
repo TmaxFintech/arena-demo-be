@@ -2,3 +2,18 @@ spring:
   data:
     mongodb:
       uri: mongodb://mlops:tmax_mlops@34.125.46.122:27017/news?authSource=admin&authMechanism=SCRAM-SHA-1
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.158.141:3306/arena
+    username: root
+    password: root
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+
