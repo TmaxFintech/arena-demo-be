@@ -1,11 +1,12 @@
 package kr.co.tmax.arenademobe.repository;
 
 import kr.co.tmax.arenademobe.domain.CompanyStock;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;
 
-public interface CompanyStockRepository extends MongoRepository<CompanyStock, String> {
+public interface CompanyStockRepository extends JpaRepository<CompanyStock, Long> {
 
     List<CompanyStock> findTop3ByAssetName(String assetName);
     List<CompanyStock> findTop2ByAssetName(String assetName);

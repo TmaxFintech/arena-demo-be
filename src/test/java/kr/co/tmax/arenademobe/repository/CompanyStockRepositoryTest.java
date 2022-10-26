@@ -15,4 +15,11 @@ class CompanyStockRepositoryTest {
     @Autowired
     private CompanyStockRepository companyStockRepository;
 
+    @Test
+    void test() {
+//        List<CompanyStock> all = companyStockRepository.findAll();
+//        System.out.println("all = " + all);
+        List<CompanyStock> 삼성전자 = companyStockRepository.findTop1ByAssetName("삼성전자");
+        System.out.println("삼성전자 = " + 삼성전자);
+    }
 }
