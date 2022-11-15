@@ -1,7 +1,7 @@
 package kr.co.tmax.arenademobe.service;
 
 import kr.co.tmax.arenademobe.domain.CompanyStock;
-import kr.co.tmax.arenademobe.domain.Member;
+import kr.co.tmax.arenademobe.domain.UserAccount;
 import kr.co.tmax.arenademobe.repository.CompanyStockRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -16,10 +16,10 @@ public class CompanyStockService {
 
     private final CompanyStockRepository companyStockRepository;
 
-    public List<CompanyStock> getRecommend(Member member) {
-        String preferred1st = member.getPreferred1st();
-        String preferred2nd = member.getPreferred2nd();
-        String preferred3rd = member.getPreferred3rd();
+    public List<CompanyStock> getRecommend(UserAccount userAccount) {
+        String preferred1st = userAccount.getPreferred1st();
+        String preferred2nd = userAccount.getPreferred2nd();
+        String preferred3rd = userAccount.getPreferred3rd();
 
         List<CompanyStock> top3ByAssetName = companyStockRepository.findTop3ByAssetName(preferred1st);
         List<CompanyStock> top2ByAssetName = companyStockRepository.findTop2ByAssetName(preferred2nd);
