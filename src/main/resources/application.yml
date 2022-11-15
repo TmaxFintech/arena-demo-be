@@ -1,13 +1,18 @@
 spring:
-  data:
-    mongodb:
-      uri: mongodb://mlops:tmax_mlops@34.125.46.122:27017/news?authSource=admin&authMechanism=SCRAM-SHA-1
+#  data:
+#    mongodb:
+#      uri: mongodb://mlops:tmax_mlops@34.125.46.122:27017/news?authSource=admin&authMechanism=SCRAM-SHA-1
 
   datasource:
     driver-class-name: com.tmax.tibero.jdbc.TbDriver
     url: jdbc:tibero:thin:@192.168.155.152:8629:tibero
     username: tmaxfintech
     password: tmaxfintech
+
+  thymeleaf:
+    prefix: classpath:templates/
+    suffix: .html
+    cache: false
 
   jpa:
     database-platform: org.hibernate.dialect.Oracle10gDialect
