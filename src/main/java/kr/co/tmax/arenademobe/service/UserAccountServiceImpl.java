@@ -15,12 +15,12 @@ public class UserAccountServiceImpl implements UserAccountService {
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Override
-    public UserAccount getUserByEmail(String email) throws Exception {
+    public UserAccount getUserByEmail(String email) {
         return memberRepository.findByEmail(email);
     }
 
     @Override
-    public UserAccount getUserByUsername(String username) throws Exception {
+    public UserAccount getUserByUsername(String username) {
         return memberRepository.findByUsername(username);
     }
 

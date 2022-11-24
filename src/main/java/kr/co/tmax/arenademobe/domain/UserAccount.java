@@ -14,7 +14,7 @@ import javax.validation.constraints.NotEmpty;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "USER_ACCOUNT", uniqueConstraints = {@UniqueConstraint(name = "NAME_EMAIL_UNIQUE",  columnNames = {"USERNAME", "EMAIL"})})
+@Table(name = "USER_ACCOUNT")
 public class UserAccount extends BaseEntity {
 
     @Id
@@ -23,6 +23,7 @@ public class UserAccount extends BaseEntity {
 
     @NotEmpty
     @Length(min = 4)
+    @Column(unique = true)
     private String username;
 
     @NotEmpty
@@ -31,6 +32,7 @@ public class UserAccount extends BaseEntity {
 
     @NotEmpty
     @Email
+    @Column(unique = true)
     private String email;
 
     private String role;
