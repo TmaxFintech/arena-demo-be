@@ -4,9 +4,9 @@ import kr.co.tmax.arenademobe.domain.UserAccount;
 
 public interface UserAccountService {
 
-    public UserAccount getUserByEmail(String email) throws Exception;
+    public UserAccount getUserByEmail(String email);
 
-    public UserAccount getUserByUsername(String username) throws Exception;
+    public UserAccount getUserByUsername(String username);
 
     public void saveUser(UserAccount userAccount);
 }
